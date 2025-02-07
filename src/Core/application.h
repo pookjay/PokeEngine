@@ -30,7 +30,7 @@ public:
 	void SetScreenSize(unsigned int width, unsigned int height);
 
 	// Gets the screen size
-	void GetScreenSize(unsigned int& outWidth, unsigned int& outHeight);
+	void GetScreenSize(unsigned int& outWidth, unsigned int& outHeight) const;
 
 	ApplicationState GetApplicationState() const { return m_State; } 
 
@@ -44,3 +44,5 @@ private:
 	ApplicationState m_State = NullState;
 
 };
+
+void ResizeWindowCallback(GLFWwindow* window, int width, int height);
